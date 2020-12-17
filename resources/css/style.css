@@ -1,5 +1,7 @@
 body {
     background-color:#c7ccd4;
+    margin: 0;
+    padding: 0;
 }
 
 .wrapper {
@@ -7,18 +9,19 @@ body {
     display: grid;
     grid-template-areas: 
       "nav nav nav"
+      "banner banner banner"
       "gallery gallery sidebar"
       "gallery gallery sidebar"
       "gallery gallery sidebar"
       "footer footer footer";
-      grid-template-columns: auto auto auto;
+      grid-template-columns: auto auto 200px;
       grid-template-rows: ;
 
 }
 
-nav {
-    width: 100%
+.nav {
     grid-area: nav;
+    width: 100%;
     display: flex;
     justify-content: flex-end;
     justify-content: space-between;
@@ -27,18 +30,48 @@ nav {
     color: #1b2d4a;
 }
 
+.banner {
+  grid-area: banner;
+  width: 100%;
+  background-image: url("/resources/images/banner.jpg");
+  height: 400px;
+  background-size: cover;
+  text-align: center;
+}
+
 .gallery {
     display: flex;
     flex-wrap: wrap;
     grid-area: gallery;
 }
 
-nav:first-child {
+.nav:first-child {
     margin-right: auto;
 }
 
-nav ul {
+.nav ul {
+    display: flex;    
     list-style-type: none;
     margin-right: 2rem;
     cursor: pointer;
+    
+}
+
+.nav ul li {
+    margin-right: 1rem;
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+.sponsor {
+    padding: 8px;
+    border: #1b2d4a 2px solid;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #1b2d4a;
+    color: beige;
 }
