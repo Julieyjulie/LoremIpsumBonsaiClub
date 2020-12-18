@@ -19,7 +19,7 @@ h1 {
       "gallery gallery sidebar"
       "footer footer footer";
       grid-template-columns: auto auto 200px;
-      grid-template-rows: ;
+      
 
 }
 
@@ -53,6 +53,21 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     grid-area: gallery;
+    justify-content: center;
+    align-items: center;
+    }
+
+.gallery img {
+    max-width: 200px;
+    margin: 10px;
+    flex-grow: 1;
+    border:1px solid #fff;
+    -moz-box-shadow: 10px 10px 5px #ccc;
+    -webkit-box-shadow: 10px 10px 5px #ccc;
+    box-shadow: 10px 10px 5px #ccc;
+    -moz-border-radius:25px;
+    -webkit-border-radius:25px;
+    border-radius:25px;
 }
 
 .nav:first-child {
@@ -79,7 +94,11 @@ h1 {
 .sponsor {
     padding: 8px;
     border: #1b2d4a 2px solid;
-    margin-top: 30px;
+    margin: 30px;
+}
+
+.sponsorMessages {
+    text-align: center;
 }
 
 .footer {
@@ -89,3 +108,28 @@ h1 {
     background-color: #1b2d4a;
     color: beige;
 }
+
+@media only screen and (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+    
+    }
+  }
+
+@media only screen and (max-width: 500px) {
+    .wrapper {
+        grid-template-columns: auto;
+        grid-template-areas: 
+          "nav"
+          "banner"
+          "gallery"
+          "gallery"
+          "sidebar"
+          "footer";
+    }
+
+    .nav {
+        flex-direction: column;
+    
+    }
+  }
