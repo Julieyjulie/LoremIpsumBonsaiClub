@@ -14,11 +14,11 @@ h1 {
     grid-template-areas: 
       "nav nav nav"
       "banner banner banner"
-      "gallery gallery sidebar"
-      "gallery gallery sidebar"
-      "gallery gallery sidebar"
+      "sidebar gallery gallery"
+      "sidebar gallery gallery"
+      "sidebar gallery gallery"
       "footer footer footer";
-      grid-template-columns: auto auto 200px;
+      grid-template-columns: 1fr 2fr 2fr;
       
 
 }
@@ -95,17 +95,21 @@ h1 {
 
 .sidebar {
     grid-area: sidebar;
-}
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    }
 
 .sponsor {
-    padding: 1rem;
+    padding: 2rem 1rem;
     border: #1b2d4a 2px solid;
-    margin: 30px;
+    margin: 2rem;
+
 }
 
 .sponsorMessages {
     text-align: center;
-    padding: 1rem;
+    padding: 2rem;
 }
 
 .footer {
